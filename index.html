@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor Caragiu, FAF-191</title> <!-- CHANGE THESE VALUES -->
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div>
+      <h3><span>Not to do</span> taks list</h3>
+    </div>
+    
+    <div>
+      <div id="add-bar">
+        <div>
+          <span>Task</span>
+          <input id="text-input" type="text"/>
+        </div>
+        <br>
+        <div>
+          <span>Image URL</span>
+          <input id="image-link" type="text"/>
+          <span>For</span>
+          <input type="date" name="" id="date-for">
+          <button onclick = "addTask()" id="add-btn"> 
+            Add
+          </button>
+        </div>
+      </div>
+      
+      <div id="filters">
+        <div>
+          <input type="checkbox" id="date-today">
+          <span>Task for today</span>
+          
+          <input type="checkbox" id="date-all">
+          <span>All tasks</span>
+          
+          <input type="checkbox" id="date-other">
+          <span>For other date</span>
+          <input type="date" name="" id="date-show">
+        </div>
+
+        <div>
+          <span>Tasks type</span>
+          <select name="types" id="types" onchange="applyFilter()">
+            <option value="all">All tasks</option>
+            <option value="done">Not done</option>
+            <option value="active">Not to do</option>
+          </select>
+        </div>        
+      </div>
+
+      
+
+      <div id="list">
+        <div id="list-header">
+          <div id="left-header">
+            <span>Not done</span>
+          </div>
+
+          <span>Task</span>
+          
+          <div id="right-header">
+            <span>For date</span>
+          </div>
+        </div>
+        <div id="list-items">
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>
